@@ -68,7 +68,7 @@ describe("Tag type sort validations", function () {
 
         // Verify that the tag type rows are displayed in ascending order
         const afterAscSortList = getTableColumnData(rank);
-        verifySortAsc(afterAscSortList, unsortedList);
+        verifySortAsc(afterAscSortList, unsortedList, true);
 
         // Sort the tag type by rank in descending order
         sortDesc(rank);
@@ -76,7 +76,7 @@ describe("Tag type sort validations", function () {
 
         // Verify that the tag type rows are displayed in descending order
         const afterDescSortList = getTableColumnData(rank);
-        verifySortDesc(afterDescSortList, unsortedList);
+        verifySortDesc(afterDescSortList, unsortedList, true);
     });
 
     it("Tag count sort validations", function () {

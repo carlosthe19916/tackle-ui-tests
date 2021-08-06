@@ -183,19 +183,27 @@ export function getTableColumnData(columnName: string): Array<string> {
     return itemList;
 }
 
-export function verifySortAsc(listToVerify: Array<any>, unsortedList: Array<any>): void {
+export function verifySortAsc(
+    listToVerify: Array<any>,
+    unsortedList: Array<any>,
+    isNumberic: boolean = false
+): void {
     cy.wrap(listToVerify).then((capturedList) => {
         var sortedList = unsortedList.sort((a, b) =>
-            a.toString().localeCompare(b, "en-us", { ignorePunctuation: true })
+            a.toString().localeCompare(b, "en-us", { ignorePunctuation: true, numeric: isNumberic })
         );
         expect(capturedList).to.be.deep.equal(sortedList);
     });
 }
 
-export function verifySortDesc(listToVerify: Array<any>, unsortedList: Array<any>): void {
+export function verifySortDesc(
+    listToVerify: Array<any>,
+    unsortedList: Array<any>,
+    isNumberic: boolean = false
+): void {
     cy.wrap(listToVerify).then((capturedList) => {
         var reverseSortedList = unsortedList.sort((a, b) =>
-            b.toString().localeCompare(a, "en-us", { ignorePunctuation: true })
+            b.toString().localeCompare(a, "en-us", { ignorePunctuation: true, numeric: isNumberic })
         );
         expect(capturedList).to.be.deep.equal(reverseSortedList);
     });
