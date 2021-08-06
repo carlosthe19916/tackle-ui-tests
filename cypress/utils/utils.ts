@@ -7,6 +7,7 @@ import {
     groupCount,
     memberCount,
     tagCount,
+    rank,
     tdTag,
     trTag,
     button,
@@ -171,7 +172,8 @@ export function getTableColumnData(columnName: string): Array<string> {
             if (
                 columnName === groupCount ||
                 columnName === memberCount ||
-                columnName === tagCount
+                columnName === tagCount ||
+                columnName === rank
             ) {
                 if ($ele.text() !== "") itemList.push(Number($ele.text()));
             } else {
