@@ -40,8 +40,8 @@ describe("Tag validations", () => {
         preservecookies();
 
         // Interceptors
-        cy.intercept("POST", "/api/controls/tag*").as("postTag");
-        cy.intercept("GET", "/api/controls/tag*").as("getTag");
+        cy.intercept("POST", "/api/application-inventory/tag*").as("postTag");
+        cy.intercept("GET", "/api/application-inventory/tag*").as("getTag");
     });
 
     it("Tag field validations", function () {

@@ -65,7 +65,7 @@ describe("Job functions pagination validations", function () {
         preservecookies();
 
         // Interceptors for Job functions
-        cy.intercept("GET", "/api/controls/job-function*").as("getJobfunctions");
+        cy.intercept("GET", "/api/application-inventory/job-function*").as("getJobfunctions");
     });
 
     after("Perform test data clean up", function () {

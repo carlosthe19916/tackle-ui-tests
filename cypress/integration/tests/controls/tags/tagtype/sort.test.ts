@@ -24,7 +24,7 @@ describe("Tag type sort validations", function () {
         preservecookies();
 
         // Interceptors
-        cy.intercept("GET", "/api/controls/tag-type*").as("getTagtypes");
+        cy.intercept("GET", "/api/application-inventory/tag-type*").as("getTagtypes");
     });
 
     it("Tag type name sort validations", function () {

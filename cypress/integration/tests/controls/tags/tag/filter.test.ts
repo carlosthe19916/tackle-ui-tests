@@ -27,7 +27,7 @@ describe("Tags filter validations", function () {
         login();
 
         // Interceptors
-        cy.intercept("GET", "/api/controls/tag-type*").as("getTagtypes");
+        cy.intercept("GET", "/api/application-inventory/tag-type*").as("getTagtypes");
     });
 
     it("Tag name filter validations", function () {

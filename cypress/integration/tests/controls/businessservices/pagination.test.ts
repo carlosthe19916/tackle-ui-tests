@@ -71,7 +71,7 @@ describe("Business services pagination validations", function () {
         preservecookies();
 
         // Interceptors for business services
-        cy.intercept("GET", "/api/controls/business-service*").as("getBusinessService");
+        cy.intercept("GET", "/api/application-inventory/business-service*").as("getBusinessService");
     });
 
     after("Perform test data clean up", function () {

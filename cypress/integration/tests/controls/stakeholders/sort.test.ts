@@ -70,7 +70,7 @@ describe("Stakeholder sort validations", function () {
         preservecookies();
 
         // Interceptors
-        cy.intercept("GET", "/api/controls/stakeholder*").as("getStakeholders");
+        cy.intercept("GET", "/api/application-inventory/stakeholder*").as("getStakeholders");
     });
 
     after("Perform test data clean up", function () {

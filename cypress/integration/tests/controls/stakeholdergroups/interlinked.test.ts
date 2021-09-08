@@ -39,12 +39,12 @@ describe("Stakeholder group linked to stakeholder members", () => {
         preservecookies();
 
         // Interceptors for stakeholder groups
-        cy.intercept("POST", "/api/controls/stakeholder-group*").as("postStakeholdergroups");
-        cy.intercept("GET", "/api/controls/stakeholder-group*").as("getStakeholdergroups");
+        cy.intercept("POST", "/api/application-inventory/stakeholder-group*").as("postStakeholdergroups");
+        cy.intercept("GET", "/api/application-inventory/stakeholder-group*").as("getStakeholdergroups");
 
         // Interceptors for stakeholders
-        cy.intercept("POST", "/api/controls/stakeholder*").as("postStakeholder");
-        cy.intercept("GET", "/api/controls/stakeholder*").as("getStakeholders");
+        cy.intercept("POST", "/api/application-inventory/stakeholder*").as("postStakeholder");
+        cy.intercept("GET", "/api/application-inventory/stakeholder*").as("getStakeholders");
     });
 
     it("stakeholders attach, update and delete dependency on stakeholder group", function () {

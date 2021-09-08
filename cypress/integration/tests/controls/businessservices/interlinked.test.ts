@@ -14,12 +14,12 @@ describe("Business service linked to stakeholder", () => {
         login();
 
         // Interceptors for business services
-        cy.intercept("POST", "/api/controls/business-service*").as("postBusinessService");
-        cy.intercept("GET", "/api/controls/business-service*").as("getBusinessService");
+        cy.intercept("POST", "/api/application-inventory/business-service*").as("postBusinessService");
+        cy.intercept("GET", "/api/application-inventory/business-service*").as("getBusinessService");
 
         // Interceptors for stakeholders
-        cy.intercept("POST", "/api/controls/stakeholder*").as("postStakeholder");
-        cy.intercept("GET", "/api/controls/stakeholder*").as("getStakeholders");
+        cy.intercept("POST", "/api/application-inventory/stakeholder*").as("postStakeholder");
+        cy.intercept("GET", "/api/application-inventory/stakeholder*").as("getStakeholders");
     });
 
     it("stakeholder attach, update and delete dependency on business service", function () {

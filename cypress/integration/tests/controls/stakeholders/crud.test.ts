@@ -21,10 +21,10 @@ describe("Stakeholder CRUD operations", () => {
         login();
 
         // Interceptors
-        cy.intercept("POST", "/api/controls/stakeholder*").as("postStakeholder");
-        cy.intercept("GET", "/api/controls/stakeholder*").as("getStakeholders");
-        cy.intercept("PUT", "/api/controls/stakeholder/*").as("putStakeholder");
-        cy.intercept("DELETE", "/api/controls/stakeholder/*").as("deleteStakeholder");
+        cy.intercept("POST", "/api/application-inventory/stakeholder*").as("postStakeholder");
+        cy.intercept("GET", "/api/application-inventory/stakeholder*").as("getStakeholders");
+        cy.intercept("PUT", "/api/application-inventory/stakeholder/*").as("putStakeholder");
+        cy.intercept("DELETE", "/api/application-inventory/stakeholder/*").as("deleteStakeholder");
     });
 
     it("Stakeholder CRUD", function () {

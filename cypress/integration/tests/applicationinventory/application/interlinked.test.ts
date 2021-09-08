@@ -62,12 +62,12 @@ describe("Application inventory interlinked to tags and business service", () =>
         preservecookies();
 
         // Interceptors
-        cy.intercept("POST", "/api/controls/business-service*").as("postBusinessService");
-        cy.intercept("GET", "/api/controls/business-service*").as("getBusinessService");
+        cy.intercept("POST", "/api/application-inventory/business-service*").as("postBusinessService");
+        cy.intercept("GET", "/api/application-inventory/business-service*").as("getBusinessService");
 
         // Interceptors
-        cy.intercept("POST", "/api/controls/tag*").as("postTag");
-        cy.intercept("GET", "/api/controls/tag*").as("getTag");
+        cy.intercept("POST", "/api/application-inventory/tag*").as("postTag");
+        cy.intercept("GET", "/api/application-inventory/tag*").as("getTag");
 
         // Interceptors
         cy.intercept("GET", "/api/application-inventory/application*").as("getApplication");

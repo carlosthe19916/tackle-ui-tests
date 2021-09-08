@@ -71,7 +71,7 @@ describe("Stakeholder groups pagination validations", function () {
         preservecookies();
 
         // Interceptors
-        cy.intercept("GET", "/api/controls/stakeholder-group*").as("getStakeholdergroups");
+        cy.intercept("GET", "/api/application-inventory/stakeholder-group*").as("getStakeholdergroups");
     });
 
     after("Perform test data clean up", function () {

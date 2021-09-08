@@ -74,7 +74,7 @@ describe("Tag type pagination validations", function () {
         preservecookies();
 
         // Interceptors
-        cy.intercept("GET", "/api/controls/tag-type*").as("getTagtypes");
+        cy.intercept("GET", "/api/application-inventory/tag-type*").as("getTagtypes");
     });
 
     after("Perform test data clean up", function () {

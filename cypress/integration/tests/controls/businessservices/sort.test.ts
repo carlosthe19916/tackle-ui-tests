@@ -50,8 +50,8 @@ describe("Business services sort validations", function () {
         preservecookies();
 
         // Interceptors
-        cy.intercept("POST", "/api/controls/business-service*").as("postBusinessService");
-        cy.intercept("GET", "/api/controls/business-service*").as("getBusinessService");
+        cy.intercept("POST", "/api/application-inventory/business-service*").as("postBusinessService");
+        cy.intercept("GET", "/api/application-inventory/business-service*").as("getBusinessService");
     });
 
     after("Perform test data clean up", function () {

@@ -39,8 +39,8 @@ describe("Stakeholder validations", () => {
         login();
 
         // Interceptors
-        cy.intercept("POST", "/api/controls/stakeholder*").as("postStakeholder");
-        cy.intercept("DELETE", "/api/controls/stakeholder/*").as("deleteStakeholder");
+        cy.intercept("POST", "/api/application-inventory/stakeholder*").as("postStakeholder");
+        cy.intercept("DELETE", "/api/application-inventory/stakeholder/*").as("deleteStakeholder");
     });
 
     it("Stakeholder field validations", function () {

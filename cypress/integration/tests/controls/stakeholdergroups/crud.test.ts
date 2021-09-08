@@ -15,8 +15,8 @@ describe("Stakeholder group CRUD operations", () => {
         login();
 
         // Interceptors
-        cy.intercept("POST", "/api/controls/stakeholder-group*").as("postStakeholdergroups");
-        cy.intercept("GET", "/api/controls/stakeholder-group*").as("getStakeholdergroups");
+        cy.intercept("POST", "/api/application-inventory/stakeholder-group*").as("postStakeholdergroups");
+        cy.intercept("GET", "/api/application-inventory/stakeholder-group*").as("getStakeholdergroups");
     });
 
     it("Stakeholder group CRUD", function () {

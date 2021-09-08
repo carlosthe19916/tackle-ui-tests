@@ -12,10 +12,10 @@ describe("Tag Type CRUD operations", () => {
         login();
 
         // Interceptors
-        cy.intercept("POST", "/api/controls/tag-type*").as("postTagtype");
-        cy.intercept("GET", "/api/controls/tag-type*").as("getTagtypes");
-        cy.intercept("PUT", "/api/controls/tag-type/*").as("putTagtype");
-        cy.intercept("DELETE", "/api/controls/tag-type/*").as("deleteTagtype");
+        cy.intercept("POST", "/api/application-inventory/tag-type*").as("postTagtype");
+        cy.intercept("GET", "/api/application-inventory/tag-type*").as("getTagtypes");
+        cy.intercept("PUT", "/api/application-inventory/tag-type/*").as("putTagtype");
+        cy.intercept("DELETE", "/api/application-inventory/tag-type/*").as("deleteTagtype");
     });
 
     it("Tag type CRUD", function () {

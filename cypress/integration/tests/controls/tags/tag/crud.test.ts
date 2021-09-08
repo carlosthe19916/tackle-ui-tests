@@ -19,10 +19,10 @@ describe("Tag CRUD operations", () => {
         login();
 
         // Interceptors
-        cy.intercept("POST", "/api/controls/tag*").as("postTag");
-        cy.intercept("GET", "/api/controls/tag*").as("getTag");
-        cy.intercept("PUT", "/api/controls/tag/*").as("putTag");
-        cy.intercept("DELETE", "/api/controls/tag/*").as("deleteTag");
+        cy.intercept("POST", "/api/application-inventory/tag*").as("postTag");
+        cy.intercept("GET", "/api/application-inventory/tag*").as("getTag");
+        cy.intercept("PUT", "/api/application-inventory/tag/*").as("putTag");
+        cy.intercept("DELETE", "/api/application-inventory/tag/*").as("deleteTag");
     });
 
     it("Tag CRUD", function () {

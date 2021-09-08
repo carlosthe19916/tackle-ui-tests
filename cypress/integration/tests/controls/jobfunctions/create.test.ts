@@ -30,7 +30,7 @@ describe("Job Function Validations", () => {
         login();
 
         // Interceptors
-        cy.intercept("POST", "/api/controls/job-function*").as("postJobfunctions");
+        cy.intercept("POST", "/api/application-inventory/job-function*").as("postJobfunctions");
     });
 
     it("Job function field validations", function () {

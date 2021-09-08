@@ -38,7 +38,7 @@ describe("Job function sorting", function () {
         preservecookies();
 
         // Interceptors
-        cy.intercept("GET", "/api/controls/job-function*").as("getJobfunctions");
+        cy.intercept("GET", "/api/application-inventory/job-function*").as("getJobfunctions");
     });
 
     after("Perform test data clean up", function () {
